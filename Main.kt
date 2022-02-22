@@ -1,5 +1,5 @@
 fun main(args: Array<String>) {
-    atividade3()
+    atividade5()
 }
 
 fun atividade1(): Unit {
@@ -41,5 +41,29 @@ fun atividade3(): Unit {
         println("A letra $letra é uma vogal!!!")
     } else {
         println("A letra $letra é uma consoante!!!")
+    }
+}
+
+fun atividade4(): Unit {
+    val jogo = Adivinha()
+    println("Digite um número entre 0 ou 10 para o seu palpite:")
+    val palpite = readLine()!!.toInt()
+
+    if (palpite in 0..10) {
+        println(jogo.jogar(palpite))
+    } else {
+        println("Palpite inválido!!!")
+    }
+}
+
+fun atividade5(): Unit{
+    val jogar = Jokenpo()
+    println("Digite um número 1-Pedra, 2-Papel ou 3-Tesoura")
+    val jogador = readLine()!!.toInt()
+
+    if (jogador in 1..3) {
+        println(jogar.jogar(jogador))
+    }else{
+        println("Jogada inválidada!!!")
     }
 }
